@@ -1,0 +1,35 @@
+@import "../../../../../style/public/detail.wxss";
+@import "../../activity_client/add_two/activity_add_two.wxss";
+@import "../../../style/skin.wxss";
+
+.form-group .line-desc {
+	font-size: 28rpx;
+	text-align: center;
+	width: 100%;
+	color: #666;
+}
+
+.form-group input {
+	flex: 1;
+	font-size: 30rpx;
+	color: #555 !important;
+	padding-right: 20rpx;
+	height: 60rpx;
+}
+
+.submit-line {
+	width: 100%;
+} 
+
+.form-group .title {
+	width: unset !important;
+	margin-bottom: unset !important; 
+}
+
+.form-group   { 
+	border-bottom: 2rpx solid #ddd;
+}
+
+ 
+
+ 

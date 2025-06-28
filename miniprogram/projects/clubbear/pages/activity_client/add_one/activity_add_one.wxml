@@ -1,0 +1,34 @@
+<view class="main">
+	<view class="title">
+		<text>活动类型</text>
+	</view>
+	<view class="item {{cateId===item.id&&'cur'}}" wx:for="{{cateList}}" wx:key="k" bind:tap="bindCateTap" data-cate="{{item.id}}">
+		<view class="left">
+			<image src="../../../images/activity/{{item.id}}.png" />
+			<text>{{item.title}}</text>
+		</view>
+		<view class="right">{{item.desc}}</view>
+	</view>
+
+
+	<view class="title margin-top-s">
+		<text>活动方式</text>
+	</view>
+	<view class="item {{method=='0'?'cur':''}}" bind:tap="bindMethodTap" data-method="0">
+		<view class="left">
+			<image src="../../../images/activity/11.png" />
+			<text>线下活动</text>
+		</view>
+		<view class="right">同城面对面，结识新朋友</view>
+	</view>
+	<view class="item {{method=='1'?'cur':''}}" bind:tap="bindMethodTap" data-method="1">
+		<view class="left">
+			<image src="../../../images/activity/22.png" />
+			<text>线上活动</text>
+		</view>
+		<view class="right">线上会议，随时随地</view>
+	</view>
+
+	<view bind:tap="bindSubmitTap" class="submit">确 认</view>
+	<view style="height: 100rpx;"></view>
+</view>

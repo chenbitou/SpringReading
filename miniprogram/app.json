@@ -1,0 +1,116 @@
+{
+	"pages": [
+		"projects/clubbear/pages/default/index/default_index",
+		"projects/clubbear/pages/activity/index/activity_index",
+		"projects/clubbear/pages/about/index/about_index",
+		"projects/clubbear/pages/search/search",
+		"projects/clubbear/pages/my/index/my_index",
+		"projects/clubbear/pages/my/reg/my_reg",
+		"projects/clubbear/pages/my/edit/my_edit",
+		"projects/clubbear/pages/my/foot/my_foot",
+		"projects/clubbear/pages/my/fav/my_fav",
+		"projects/clubbear/pages/news/index/news_index",
+		"projects/clubbear/pages/news/detail/news_detail",
+		"projects/clubbear/pages/news/cate1/news_cate1",
+		"projects/clubbear/pages/admin/news/list/admin_news_list",
+		"projects/clubbear/pages/admin/news/add/admin_news_add",
+		"projects/clubbear/pages/admin/news/edit/admin_news_edit",
+		"projects/clubbear/pages/admin/setup/about/admin_setup_about",
+		"projects/clubbear/pages/admin/setup/about_list/admin_setup_about_list",
+		"projects/clubbear/pages/admin/setup/qr/admin_setup_qr",
+		"projects/clubbear/pages/admin/index/home/admin_home",
+		"projects/clubbear/pages/admin/index/login/admin_login",
+		"projects/clubbear/pages/admin/content/admin_content",
+		"projects/clubbear/pages/admin/mgr/log/admin_log_list",
+		"projects/clubbear/pages/admin/mgr/edit/admin_mgr_edit",
+		"projects/clubbear/pages/admin/mgr/list/admin_mgr_list",
+		"projects/clubbear/pages/admin/mgr/add/admin_mgr_add",
+		"projects/clubbear/pages/admin/mgr/pwd/admin_mgr_pwd",
+		"projects/clubbear/pages/admin/user/list/admin_user_list",
+		"projects/clubbear/pages/admin/user/detail/admin_user_detail",
+		"projects/clubbear/pages/admin/user/export/admin_user_export",
+		"projects/clubbear/pages/activity/detail/activity_detail",
+		"projects/clubbear/pages/activity/join/activity_join",
+		"projects/clubbear/pages/activity/my_join_list/activity_my_join_list",
+		"projects/clubbear/pages/activity/my_join_detail/activity_my_join_detail",
+		"projects/clubbear/pages/activity/my_join_self/activity_my_join_self",
+		"projects/clubbear/pages/activity/calendar/activity_calendar",
+		"projects/clubbear/pages/admin/activity/join_list/admin_activity_join_list",
+		"projects/clubbear/pages/admin/activity/self/admin_activity_self",
+		"projects/clubbear/pages/admin/activity/export/admin_activity_export",
+		"projects/clubbear/pages/admin/activity/scan/admin_activity_scan",
+		"projects/clubbear/pages/admin/activity/list/admin_activity_list",
+		"projects/clubbear/pages/admin/activity/add/admin_activity_add",
+		"projects/clubbear/pages/admin/activity/edit/admin_activity_edit",
+		"projects/clubbear/pages/comment/list/comment_list",
+		"projects/clubbear/pages/comment/add/comment_add",
+		"projects/clubbear/pages/activity_client/add/activity_add",
+		"projects/clubbear/pages/activity_client/my_list/activity_my_list",
+		"projects/clubbear/pages/activity_client/edit/activity_edit",
+		"projects/clubbear/pages/activity/online/activity_online",
+		"projects/clubbear/pages/activity_client/join_list/activity_join_list",
+		"projects/clubbear/pages/activity_client/export/activity_export",
+		"projects/clubbear/pages/activity_client/scan/activity_scan",
+		"projects/clubbear/pages/activity_client/self/activity_self",
+		"projects/clubbear/pages/activity_client/qr/activity_qr",
+		"projects/clubbear/pages/activity_client/add_one/activity_add_one",
+		"projects/clubbear/pages/activity_client/add_two/activity_add_two",
+		"projects/clubbear/pages/activity/join_qr/activity_join_qr",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#56A995",
+		"navigationBarTitleText": "读书会小程序",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#FFFFFF",
+		"color": "#999999",
+		"selectedColor": "#56A995",
+		"list": [
+			{
+				"pagePath": "projects/clubbear/pages/default/index/default_index",
+				"text": "线下",
+				"iconPath": "/projects/clubbear/images/tabbar/home.png",
+				"selectedIconPath": "/projects/clubbear/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "projects/clubbear/pages/activity/online/activity_online",
+				"text": "线上",
+				"iconPath": "/projects/clubbear/images/tabbar/online.png",
+				"selectedIconPath": "/projects/clubbear/images/tabbar/online_cur.png"
+			},
+			{
+				"pagePath": "projects/clubbear/pages/news/index/news_index",
+				"text": "公告通知",
+				"iconPath": "/projects/clubbear/images/tabbar/add.png",
+				"selectedIconPath": "/projects/clubbear/images/tabbar/add_cur.png"
+			},
+			{
+				"pagePath": "projects/clubbear/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/projects/clubbear/images/tabbar/my.png",
+				"selectedIconPath": "/projects/clubbear/images/tabbar/my_cur.png"
+			}
+		]
+	},
+	"requiredPrivateInfos": [
+		"chooseLocation"
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

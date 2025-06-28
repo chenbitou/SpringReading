@@ -1,0 +1,11 @@
+<view class="main">
+	<view class="hint">请扫码入活动群，了解更多信息，若有变化会在群内发布</view>
+
+	<view class="box">
+		<image show-menu-by-longpress="{{true}}" class="loading" mode="widthFix" lazy-load="{{true}}" src="{{activity.ACTIVITY_OBJ.img[0]}}" />
+		<text class="text-grey text-s margin-bottom">长按二维码识别</text>
+		<text bind:tap="url" data-type="copy" data-url="{{activity.ACTIVITY_OBJ.weixin}}" class="owner">发起人微信：{{activity.ACTIVITY_OBJ.weixin}}</text>
+
+		<view bind:tap="url" data-type="relaunch" data-url="../../default/index/default_index" class="submit margin-top-xxl">返回首页</view>
+	</view>
+</view>

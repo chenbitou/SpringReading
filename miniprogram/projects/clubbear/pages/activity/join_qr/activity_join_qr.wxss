@@ -1,0 +1,48 @@
+@import "../../../style/skin.wxss";
+
+page {
+	background-color: #fff;
+}
+
+.main {
+	padding: 40rpx;
+}
+
+.hint {
+	background-color: #E8887C;
+	color: #fff;
+	border-radius: 10rpx;
+	padding: 20rpx;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.box image {
+	width: 400rpx;
+	margin-top: 30rpx;
+}
+
+.box .owner {
+	padding: 10rpx 40rpx;
+	border-radius: 30rpx;
+	background-color: var(--projectColor);
+	color: #fff;
+	margin-top: 20rpx;
+}
+
+.submit {
+	padding: 20rpx 80rpx;
+	border-radius: 40rpx;
+	background-color: var(--projectColor);
+	color: #fff;
+	margin-top: 20rpx;
+	font-size: 32rpx;
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 120rpx;
+}

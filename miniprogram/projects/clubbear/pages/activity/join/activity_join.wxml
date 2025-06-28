@@ -1,0 +1,56 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l load-project"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l load-project"></view>
+
+<view wx:if="{{isLoad&&isLogin}}" class="main padding-project">
+
+
+	<view class="title"><text>社交规范</text></view>
+	<view class="item-box">
+		<view class="tt">1.禁止营销行为，被举报后会短期封号</view>
+		<view class="desc"><text>禁止宣传其他活动或售卖产品等营销行为\n禁止向成员私信发广告、活动等营销信息</text></view>
+		<view class="tt">2.可以打广告的场景只有两个：</view>
+		<view class="desc"><text>自我介绍环节，介绍自己的职业\n为读书会提供场地，场地默认的宣传属性</text></view>
+		<view class="tt">3.报名后仅限本人参加，仅场地提供方可邀请非会员参加</view>
+
+		<view class="confirm" bind:tap="bindCheckTap" data-check="check1">
+			<text wx:if="{{!check1}}" style="font-size: 42rpx;" class="icon-square margin-right-xs text-grey"></text>
+			<text wx:else style="font-size: 42rpx;" class="icon-squarecheckfill margin-right-xs text-project"></text>
+			<text>确认阅读</text>
+		</view>
+	</view>
+
+	<view class="title"><text>点杯饮品支持店主</text></view>
+	<view class="item-box">
+		<view class="desc">如果读书会在营商场所进行，请每人根据自己的喜好点一杯饮品或是其他，店里免费预留位置，也有相应成本，感谢理解。如果在非营商场所举办，则无要求</view>
+
+
+		<view class="confirm" bind:tap="bindCheckTap" data-check="check2">
+			<text wx:if="{{!check2}}" style="font-size: 42rpx;" class="icon-square margin-right-xs text-grey"></text>
+			<text wx:else style="font-size: 42rpx;" class="icon-squarecheckfill margin-right-xs text-project"></text>
+			<text>确认阅读</text>
+		</view>
+	</view> 
+
+	<view class="article-box">
+		<!--<view class="form-box card-project shadow-project">
+			<view class="form-group">
+				<view class="title text-cut">{{activity.ACTIVITY_TITLE}}</view>
+			</view> 
+
+		</view>-->
+
+		<!-- form content begin -->
+		<view class="form-box card-project shadow-project margin-top">
+			<view class="form-group">
+				<view class="line-desc">请您填写资料，带<text class="text-red text-bold">*</text>号为必填项</view>
+			</view>
+			<cmpt-form-show isConfirm="{{true}}" isCacheMatch="{{false}}" id="form-show" mark="activity-form-show" forms="{{activity.myForms}}" fields="{{activity.ACTIVITY_JOIN_FORMS}}" bind:submit="bindSubmitCmpt" />
+		</view>
+		<!-- form content end -->
+
+	</view>
+
+	<button bindtap="bindSubmitTap" class="btn-base btn-project" style="margin-bottom:100rpx;">确认报名</button>
+
+
+</view>

@@ -1,0 +1,14 @@
+@import "../../default/index/default_index.wxss";
+
+.top {
+	background-image: linear-gradient(180deg, #B5CC99, #72B180);
+}
+
+.top .line2 .item {
+	background-color: #76B381;
+}
+
+.cate-list .item.cur {
+	background: #72B180;
+	color: #fff;
+}

@@ -1,0 +1,63 @@
+@import "../../../style/skin.wxss";
+
+page {
+	background-color: #fff !important;
+}
+
+.main {
+	padding: 20rpx 50rpx;
+}
+
+.title {
+	width: 100%;
+	margin-bottom: 40rpx;
+}
+
+.title>text {
+	font-size: 32rpx;
+	border-bottom: 10rpx solid var(--projectCompareColor);
+	font-weight: 700;
+}
+
+.item {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 34rpx 30rpx;
+	margin-bottom: 30rpx;
+	background: linear-gradient(180deg, rgba(61, 145, 126, 0.10) 0%, rgba(204, 216, 188, 0.10) 100%);
+	color: #318b79;
+	border-radius: 8rpx;
+	align-items: center;
+}
+
+.item.cur {
+	background: linear-gradient(93deg, #3D917E 2%, #CCD8BC 72.9%);
+	color: #ffffff;
+}
+
+.item .left {
+	display: flex;
+	align-items: center;
+	font-size: 32rpx;
+	font-weight: bold;
+}
+
+.item .left image {
+	width: 60rpx;
+	height: 60rpx;
+	margin-right: 30rpx;
+}
+
+.item .right {
+	font-size: 24rpx;
+}
+
+.submit {
+	padding: 20rpx 80rpx;
+	border-radius: 40rpx;
+	background-color: var(--projectColor);
+	color: #fff;
+	margin-top: 20rpx;
+	font-size: 32rpx;
+}

@@ -1,0 +1,52 @@
+<view class="main">
+	<view class="title"><text>如何选择活动场地</text></view>
+	<view class="item-box">
+		<view class="tt">1.自行选择场地</view>
+		<view class="desc">如果您自己有场地，或者您自行预定的场地，都可以填写使用</view>
+		<view class="tt">2.选择读书会合作的场地</view>
+		<view class="desc">询问分会长了解读书会合作场地，填写后由分会长来预定场地（可通过“我的”页面找到分会长的微信二维码）</view>
+
+		<view class="confirm" bind:tap="bindCheckTap" data-check="check1">
+			<text wx:if="{{!check1}}" style="font-size: 42rpx;" class="icon-square margin-right-xs text-grey"></text>
+			<text wx:else style="font-size: 42rpx;" class="icon-squarecheckfill margin-right-xs text-project"></text>
+			<text>确认阅读</text>
+		</view>
+	</view>
+
+	<view class="title"><text>及时更新活动群码</text></view>
+	<view class="item-box">
+		<view class="desc">发起活动时，需要建立活动群。报名者通过群码入群，微信群码有效期为7天，发起人要及时通过活动页面的“管理”按钮及时更新群码</view>
+
+
+		<view class="confirm" bind:tap="bindCheckTap" data-check="check2">
+			<text wx:if="{{!check2}}" style="font-size: 42rpx;" class="icon-square margin-right-xs text-grey"></text>
+			<text wx:else style="font-size: 42rpx;" class="icon-squarecheckfill margin-right-xs text-project"></text>
+			<text>确认阅读</text>
+		</view>
+	</view>
+
+	<view class="title"><text>点杯饮品支持店主</text></view>
+	<view class="item-box">
+		<view class="desc">如果读书会在营商场所进行，请每人根据自己的喜好点一杯饮品或是其他，店里免费预留位置，也有相应成本，感谢理解。如果在非营商场所举办，则无要求</view>
+
+
+		<view class="confirm" bind:tap="bindCheckTap" data-check="check3">
+			<text wx:if="{{!check3}}" style="font-size: 42rpx;" class="icon-square margin-right-xs text-grey"></text>
+			<text wx:else style="font-size: 42rpx;" class="icon-squarecheckfill margin-right-xs text-project"></text>
+			<text>确认阅读</text>
+		</view>
+	</view>
+
+	<view class="title"><text>禁止付费活动</text></view>
+	<view class="item-box">
+		<view class="desc">不要发布任何收取报名费用的活动，付费活动会拒绝通过，无法发布。如果发起人私下收取活动费用，全体会员可举报。</view> 
+		<view class="confirm" bind:tap="bindCheckTap" data-check="check4">
+			<text wx:if="{{!check4}}" style="font-size: 42rpx;" class="icon-square margin-right-xs text-grey"></text>
+			<text wx:else style="font-size: 42rpx;" class="icon-squarecheckfill margin-right-xs text-project"></text>
+			<text>确认阅读</text>
+		</view>
+	</view>
+
+	<view bind:tap="bindSubmitTap" class="submit">确认发起</view>
+	<view style="height: 100rpx;"></view>
+</view>

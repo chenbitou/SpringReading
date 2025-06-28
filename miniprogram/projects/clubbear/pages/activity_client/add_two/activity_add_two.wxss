@@ -1,0 +1,63 @@
+@import "../../../style/skin.wxss";
+
+page {
+	background-color: #fff !important;
+}
+
+.main {
+	padding: 30rpx 30rpx;
+}
+
+.title {
+	width: 100%;
+	margin-bottom: 40rpx; 
+}
+
+.title>text {
+	font-size: 42rpx;
+	font-weight: bold;
+	background-color: var(--projectColor);
+	color: #fff;
+	padding: 10rpx 40rpx;
+	border-radius: 40rpx;
+	border-bottom: 6rpx solid #EBAC5A;
+	border-right: 6rpx solid #EBAC5A;
+}
+
+.item-box {
+	width: 100%;
+	background-image: linear-gradient(180deg, #F2F9ED, #F2F9ED, #fff);
+	padding: 40rpx;
+	border-radius: 40rpx;
+	margin-bottom: 30rpx;
+}
+
+.item-box .tt {
+	font-size: 34rpx;
+	font-weight: bold;
+	padding: 10rpx 4rpx;
+}
+
+.item-box .desc {
+	font-size: 30rpx;
+	padding: 10rpx 0;
+	line-height: 1.9;
+}
+
+.item-box .confirm {
+	width: 100%;
+	font-size: 36rpx;
+	text-align: center;
+	padding: 30rpx 0;
+	font-weight: bold;
+	color: var(--projectColor)
+}
+
+.submit {
+	padding: 20rpx 80rpx;
+	border-radius: 40rpx;
+	background-color: var(--projectColor);
+	color: #fff;
+	margin-top: 20rpx;
+	font-size: 32rpx;
+}

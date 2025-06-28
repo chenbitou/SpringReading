@@ -1,0 +1,118 @@
+<view wx:if="{{!isLoad}}" class="margin-top load loading text-l load-project"></view>
+<block wx:else>
+
+	<cmpt-comm-list type="activity-list-activity-online" _params="{{_params}}" search="{{search||''}}" _menus="{{sortMenus}}" _items="{{sortItems}}" sortMenusDefaultIndex="0" route="activity/online_list" topBottom="120" isTotalMenu="{{false}}" placeholder="搜索" bind:list="bindCommListCmpt">
+
+		<view class="main">
+			<view class="top">
+				<view class="line1">
+					<view class="location">
+						<cmpt-city bind:select="bindCityTap"></cmpt-city>
+					</view>
+				</view>
+				<view class="line2">
+					<view class="item">
+						<image src="../../../images/menu/1.png" />
+						<view class="txt">成为会员</view>
+					</view>
+					<view class="item" bind:tap="url" data-url="../../activity_client/add_one/activity_add_one">
+						<image src="../../../images/menu/2.png" />
+						<view class="txt">发起活动</view>
+					</view>
+					<view class="item">
+						<image src="../../../images/menu/3.png" />
+						<view class="txt">建立分会</view>
+					</view>
+				</view>
+
+				<view class="line3">
+					<view class="item" bind:tap="bindCurTap" data-cur="run">
+						<text class="tt {{cur=='run'?'cur':''}}">当前活动</text>
+					</view>
+					<view class="item" bind:tap="bindCurTap" data-cur="his">
+						<text class="tt {{cur=='his'?'cur':''}}">过往活动</text>
+					</view>
+					<view class="item" bind:tap="bindCurTap" data-cur="hot">
+						<text class="tt {{cur=='hot'?'cur':''}}">最热活动</text>
+					</view>
+				</view>
+			</view>
+
+			<view class="down">
+				<view class="cate-list">
+					<view bind:tap="bindCateTap" data-cate="" class="item {{cateId===''?'cur':''}}">全部</view>
+					<view bind:tap="bindCateTap" data-cate="{{item.id}}" wx:for="{{cateList}}" wx:key="k" class="item {{cateId==item.id?'cur':''}}">{{item.title}}</view>
+				</view>
+
+				<view class="list" wx:if="{{cur!='his'}}">
+					<block wx:for="{{dataList.list}}" wx:key="key">
+						<view class="day" wx:if="{{item.mark1}}">
+							<view class="txt"><text class="mm">{{item.mon}}</text>{{item.mark1}}</view>
+						</view>
+						<view class="item" bindtap="url" data-url="../../activity/detail/activity_detail?id={{item._id}}">
+							<!--<view class="status {{item.statusDesc=='报名中'?'comm':''}}">
+							<text wx:if="{{item.statusDesc=='报名中'}}">报名中</text>
+							<text wx:else>{{item.statusDesc}}</text>
+						</view>-->
+							<view class="left">
+								<view class="mark">{{item.ACTIVITY_CATE_NAME}}</view>
+								<image class="loading shadow-project" mode="aspectFill" lazy-load="{{true}}" src="{{item.ACTIVITY_OBJ.cover[0]}}" />
+							</view>
+
+							<view class="right">
+								<view class="title content-cut-two">{{item.ACTIVITY_TITLE}} </view>
+								<view class="detail">
+									<view class="line"><text class="icon-time margin-right-xxs text-grey"></text>时间：{{item.start}}</view>
+									<view wx:if="{{item.ACTIVITY_METHOD==0}}" class="line content-cut-one"><text class="icon-location margin-right-xxs text-grey"></text>地点：{{item.ACTIVITY_ADDRESS}}</view>
+									<view wx:else class="line content-cut-one"><text class="icon-video margin-right-xxs text-grey"></text>平台：{{item.ACTIVITY_OBJ.plat}}</view>
+									<view class="line"><text class="icon-friend margin-right-xxs text-grey"></text>报名：{{item.ACTIVITY_JOIN_CNT}}<text class="num">/</text>{{item.ACTIVITY_MAX_CNT==0?'不限':item.ACTIVITY_MAX_CNT}}</view>
+								</view>
+							</view>
+						</view>
+					</block>
+				</view>
+
+				<view class="his-list margin-top"  wx:elif="{{cur=='his'}}">
+					<view bindtap="url" data-url="../../activity/detail/activity_detail?id={{item._id}}" class="item shadow-project" wx:for="{{dataList.list}}" wx:key="K">
+						<view class="left">
+							<view class="mark">{{item.ACTIVITY_CATE_NAME}}</view>
+							<image class="loading" lazy-load="{{true}}" mode="aspectFill" src="{{item.ACTIVITY_OBJ.cover[0]}}" />
+						</view>
+						<view class="right"> 
+							<view class="name">
+								<text class="t1 content-cut-one">{{item.ACTIVITY_TITLE}}</text>
+							</view>
+							<view class="line1">
+								<view wx:if="{{item.ACTIVITY_METHOD==0}}" class="line content-cut-one"><text class="icon-location margin-right-xxs text-grey"></text>地点：{{item.ACTIVITY_ADDRESS}}</view>
+								<view wx:else class="line content-cut-one"><text class="icon-video margin-right-xxs text-grey"></text>平台：{{item.ACTIVITY_OBJ.plat}}</view>
+							</view>
+							<view class="line1">
+								<text class="icon-time margin-right-xxs text-grey"></text><text class="t1">{{item.start}}</text> 
+							</view>
+						</view>
+
+					</view>
+				</view> 
+
+				<!--load begin-->
+				<import src="../../../../../tpls/public/list_load_tpl.wxml" />
+				<template is="listLoadTpl" data="{{skin:'load-project',dataList,noHint:'暂无活动哦~'}}" />
+				<!--load end-->
+			</view>
+		</view>
+
+
+
+
+
+
+	</cmpt-comm-list>
+
+</block>
+
+
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'activity_online',returnHome:false}}" />
+</block>

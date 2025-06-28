@@ -1,0 +1,13 @@
+@import "../../../style/skin.wxss";
+
+.text-blue {
+	color:var(--projectColor)!important
+}
+
+.main {
+	padding:0!important;
+} 
+
+.form-box {
+	border-radius: 0!important;
+}

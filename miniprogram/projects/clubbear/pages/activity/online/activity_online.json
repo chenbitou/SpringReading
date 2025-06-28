@@ -1,0 +1,7 @@
+{
+	"usingComponents": {  
+	}, 
+	"disableScroll": true, 
+	"navigationBarBackgroundColor": "#B5CC99",
+	"navigationBarTitleText": "线上活动"
+}
